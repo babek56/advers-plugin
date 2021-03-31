@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       اعلامیه بالای فروشگاه
  * Plugin URI:        https://example.com/plugins/the-basics/
- * Description:       این فقط یک افزونه نیست، این نشان‌دهنده امید و شور و شوق یک انسان است.
+ * Description:       افزونه ای برای قرار دادن اعلام و اخبار فروشگاه و سایت های ورد پرس.
  * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.2
