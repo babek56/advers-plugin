@@ -29,6 +29,24 @@ add_action('wp_footer','bs_showMessage');
       'If you smile when no one else is around, you really mean it.
       Andy Rooney'
     );
+    defined('ABSPATH') || exit;
+
+    add_action( 'admin_menu', 'bs_addMenu' );
+    function bs_addMenue(){
+      add_menu_page(
+           'تنظیمات نوار اعلانات',
+           ' نوار اعلانات',
+           'administratore',
+           'bs_add_menu',
+           'bs_echo_option',
+            plugins_url('images/FAVICON.png', __FILE__)           
+      );
+
+     
+    function bs_echo_option(){
+      echo 'babakSafaie';
+    }
+  };
 
     $messageIndex = rand (0 , 7);
     $message = $messages[$messageIndex];
