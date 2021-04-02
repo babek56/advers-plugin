@@ -21,23 +21,35 @@ defined('ABSPATH') || exit;
       add_menu_page(
            'تنظیمات نوار اعلانات',
            ' نوار اعلانات',
-           'administratore',
+           'administrator',
            'bs_add_menu',
            'bs_echo_option',
-            plugins_url('images/FAVICON.png', __FILE__ )           
+            plugins_url('images/FAVICON.png', __FILE__ ),
+            5          
       );
 
      
       function bs_echo_option(){
          include plugin_dir_path(__FILE__) . 'admin/view/adminLayout.php';
     }
-  };
 
-    add_submenu_page('bs_add_menu','تنظیمات افزونه','تنظیمات','administratore','wpbs_adv_option','wpbs_advertisment_option','1');
+    add_submenu_page(
+      'bs_add_menu',
+      'تنظیمات افزونه',
+      'تنظیمات',
+      'administrator',
+      'wpbs_adv_option',
+      'wpbs_advertisment_option',
+      '1'
+    );
 
     function wpbs_adv_option(){
       include plugin_dir_path(__FILE__) . 'admin/view/adminLayoutOption.php';
     };
+
+  };
+
+    
 
 add_action('wp_footer','bs_showMessage');
   function bs_showMessage(){
