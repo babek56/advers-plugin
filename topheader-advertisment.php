@@ -43,7 +43,7 @@ defined('ABSPATH') || exit;
       '1'
     );
 
-    function wpbs_adv_option(){
+    function wpbs_advertisment_option(){
       include plugin_dir_path(__FILE__) . 'admin/view/adminLayoutOption.php';
     };
 
