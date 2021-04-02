@@ -13,6 +13,29 @@
  * Text Domain:       my-basics-plugin
  * Domain Path:       /languages
  */
+
+defined('ABSPATH') || exit;
+
+    add_action( 'admin_menu','wpbs_add_menu_page');
+     function wpbs_add_menu_page(){
+      add_menu_page(
+           'تنظیمات نوار اعلانات',
+           ' نوار اعلانات',
+           'administrator',
+           'wpbs_add_menu',
+           'wpbs_echo_option',
+            plugins_url('images/FAVICON.png', __FILE__ ),
+            10          
+      );
+
+     
+      function wpbs_echo_option(){
+      include plugin_dir_path(__FILE__) . 'admin/view/adminLayout.php';
+    };
+  };
+
+
+
 add_action('wp_footer','bs_showMessage');
   function bs_showMessage(){
     $messages = array(
@@ -29,24 +52,7 @@ add_action('wp_footer','bs_showMessage');
       'If you smile when no one else is around, you really mean it.
       Andy Rooney'
     );
-    defined('ABSPATH') || exit;
-
-    add_action( 'admin_menu', 'bs_addMenu' );
-    function bs_addMenue(){
-      add_menu_page(
-           'تنظیمات نوار اعلانات',
-           ' نوار اعلانات',
-           'administratore',
-           'bs_add_menu',
-           'bs_echo_option',
-            plugins_url('images/FAVICON.png', __FILE__)           
-      );
-
-     
-    function bs_echo_option(){
-      echo 'babakSafaie';
-    }
-  };
+    
 
     $messageIndex = rand (0 , 7);
     $message = $messages[$messageIndex];
