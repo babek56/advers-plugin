@@ -9,7 +9,7 @@ add_action( 'admin_menu','wpbs_add_menu_page');
            'bs_add_menu',
            'bs_echo_option',
             wpbs_image_url.'/FAVICON.png',
-            5          
+            6        
       );
 
      
