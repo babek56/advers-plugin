@@ -18,6 +18,7 @@ defined('ABSPATH') || exit;
 
     define('wpbs_advs_plugin_dir', plugin_dir_path(__FILE__));
     define('wpbs_image_url',plugins_url('images',__FILE__));
+    define('wpbs_baseName',plugin_baseName(__FILE__));
     if (is_admin()){
       include wpbs_advs_plugin_dir.'admin/include/functions.php';
     }

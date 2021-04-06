@@ -1,6 +1,6 @@
 <?php
 
  echo 'hello world';
-// آرایه ی منوها
+// آرایه ی افزونه ها
 // global $menu;
 //   print_r($menu);
